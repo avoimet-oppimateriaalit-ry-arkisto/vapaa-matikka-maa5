@@ -1,9 +1,54 @@
-\Opensolutionfile{ans}[content/vastaukset]
-\part{Vektorit}
-\input{content/vektorit}
-\part{Matriisit}
-\input{content/matriisit}
+%\Opensolutionfile{ans}[content/vastaukset]
+%\part{Vektorit}
+%\input{content/vektorit}
+%\part{Matriisit}
+%\input{content/matriisit}
+%\Closesolutionfile{ans}
+%
+%\section{Vastaukset}
+%\input{content/vastaukset}
+
+\providecommand{\lukufilter}[2]{#2} % ylikirjoitetaan kaanna_luku.sh -skriptistä.
+\newcommand{\osa}[1]{\chapter{#1}} % osa
+\newcommand{\nosa}[1]{\chapter*{#1} \addcontentsline{toc}{chapter}{#1}} % numeroimaton osa
+\newcommand{\luku}[2]{\section{#2} \lukufilter{#1}{\input{content/TEORIA_#1} \input{content/TEHT_#1}}} % luku
+\newcommand{\nluku}[2]{\section*{#2} \addcontentsline{toc}{section}{#2} \lukufilter{#1}{\input{content/#1}}} % numeroimaton luku
+\newcommand{\vast}{\section*{Vastaukset} \addcontentsline{toc}{section}{Vastaukset} \begin{vastaussivu} \input{content/LIITE_vastaukset} \end{vastaussivu}}
+
+\Opensolutionfile{ans}[content/LIITE_vastaukset] % kirjoittaa vastaukset tiedostoon content/LIITE_vastaukset.tex
+
+\newpage
+%\nluku{LIITE_esipuhe}{Esipuhe}
+
+\osa{Vektorit}
+    \luku{vektorit}{Vektorit}
+
+%\osa{Yhtälöt}
+%    \luku{yhtalo}{Yhtälö}
+%    \luku{ensimmainen}{Ensimmäisen asteen yhtälö}
+%    \luku{prosenttilaskenta}{Prosenttilaskenta}
+%    \luku{potenssiyhtalot}{Potenssiyhtälöt}
+%    \luku{verrannollisuus}{Suoraan ja kääntäen verrannollisuus}
+%
+%\osa{Funktiot}
+%    \luku{funktio}{Funktio ja sen esitystavat}
+%    \luku{potenssifunktio}{Potenssifunktio}
+%    \luku{eksponenttifunktio}{Eksponenttifunktio}
+%	
+%\nosa{Kertaustehtäviä}
+%    \nluku{LIITE_testaatietosi}{Testaa tietosi}
+%    \nluku{LIITE_kertausteht}{Kertaustehtäviä}
+%    \nluku{TEHT_harjoituskokeet}{Harjoituskokeita}
+%    \nluku{TEHT_ylioppilaskokeet}{Ylioppilaskoetehtäviä}
+%    \nluku{TEHT_paasykokeet}{Pääsy- ja valintakoetehtäviä}
+%
+%\nosa{Lisämateriaalia}
+%	\nluku{LIITE_lukujarjestelmat}{Lukujärjestelmät}
+	%\nluku{LIITE_joukot}{Joukko-opin alkeet}
+	%\nluku{LIITE_aksioomat}{Reaalilukujen aksioomat}
+	%\nluku{LIITE_sanasto}{Hakemisto ja suomi–ruotsi–englanti-sanasto}
+	%\nluku{LIITE_symbolit}{Symbolit}
+
 \Closesolutionfile{ans}
-\liitetyyli
-\section{Vastaukset}
-\input{content/vastaukset}
+\vast
+%\liitetyyli
